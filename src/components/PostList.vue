@@ -41,9 +41,9 @@ export default {
     posts: POSTS_SELECTORS.GET_POSTS,
     loading: POSTS_SELECTORS.GET_POSTS_LOADING
   }),
-  methods: mapActions([FETCH_POSTS]),
+  methods: mapActions({ fetchPosts: FETCH_POSTS }),
   mounted() {
-    this[FETCH_POSTS]();
+    this.fetchPosts();
   }
 };
 </script>
